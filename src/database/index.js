@@ -6,8 +6,7 @@ const configOptions = {
 };
 
 const connectToDB = async () => {
-  const connectionUrl =
-    "your-mongodb-url";
+  const connectionUrl = process.env.DATABASE_URL;
 
   mongoose
     .connect(connectionUrl, configOptions)
